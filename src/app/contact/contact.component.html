@@ -1,3 +1,37 @@
-<p>
-  contact works!
-</p>
+<div class="container">
+  
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/weather">Weather</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+      </nav>
+    
+    <form class="myForm" [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <h3 class="text-center">Please enter your details.</h3>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control"  placeholder="Name" formControlName="name">
+            <div *ngIf=" f.name.invalid && (f.name.dirty || f.name.touched)" class="alert alert-danger">
+                <div *ngIf="f.name.errors.required">Please enter your name.</div>
+              </div>
+          </div>
+        <div class="form-group">
+          <label for="Email">Email address</label>
+          <input type="email" class="form-control" aria-describedby="email" placeholder="Enter email" formControlName="email">
+          <small id="email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          <div *ngIf=" f.email.invalid && (f.email.dirty || f.email.touched)" class="alert alert-danger">
+              <div *ngIf="f.email.errors.required">Please enter your valid email address.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" placeholder="Phone" formControlName="phone">
+            <div *ngIf=" f.phone.invalid && (f.phone.dirty || f.phone.touched)" class="alert alert-danger">
+                <div *ngIf="f.phone.errors.required">Please enter your phone number.</div>
+              </div>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+        
+</div>
