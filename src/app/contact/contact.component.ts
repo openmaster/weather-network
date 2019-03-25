@@ -28,6 +28,7 @@ export class ContactComponent implements OnInit {
     console.log(this.contactForm);
     const email = {
       subject: 'New Contact',
+      // tslint:disable-next-line:max-line-length
       body: `Hi I am ${this.contactForm.value.name} trying to contact you. My email address ${this.contactForm.value.email} and phone number ${this.contactForm.value.phone}`
     };
     window.open(`mailto:vishav.jh@gmail.com?subject=${email.subject}&body=${email.body}`);
