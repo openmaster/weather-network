@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="jumbotron" *ngIf="data">
+        <h2> <span class="display-4 text-capitalize">{{city}}</span>&nbsp;<span class="display-2 text-info">{{data.temperature}}&deg;{{data.temperature_unit}}</span></h2>
+        <p>Feels like: <span class="lead">{{data.feels_like}}&deg;{{data.temperature_unit}} &nbsp; {{data.wxcondition}}</span></p>
+        <p class="float-right">{{data.lbl_updatetime}} {{data.updatetime}}</p>
+        <hr class="my-3">
+        <button type="button" class="btn btn-outline-info" routerLink="/weather">Back</button> &nbsp;
+      </div>
+</div>
