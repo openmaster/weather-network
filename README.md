@@ -9,9 +9,12 @@ get this project to your local system with following steps
 3. npm install
 
   // this will install all the required dependencies of the project.
-  // now its ready to run
+  
+4. ng build
 
-## Development server
+  // it will build the project and now its ready to run
+
+## Running project
 
 goto project directory
 Run `npm start` to run this project. Navigate to `http://localhost:3220/`. 
