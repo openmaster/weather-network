@@ -31,7 +31,7 @@
                 <div *ngIf="f.phone.errors.required">Please enter your phone number.</div>
               </div>
           </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="fValid">Submit</button>
       </form>
         
 </div>
