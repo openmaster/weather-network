@@ -11,7 +11,6 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WeatherComponent } from './weather/weather.component';
 import { GalleryComponent } from './gallery/gallery.component';
-import { PhotoComponent } from './photo/photo.component';
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { WeatherDetailsComponent } from './weather-details/weather-details.compo
     PageNotFoundComponent,
     WeatherComponent,
     GalleryComponent,
-    PhotoComponent,
     WeatherDetailsComponent
   ],
   imports: [

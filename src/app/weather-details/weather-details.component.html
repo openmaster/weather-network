@@ -1,7 +1,7 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a routerLink="/weather">Weather</a></li>
+          <li class="breadcrumb-item"><a routerLink="/app/weather">Weather</a></li>
           <li class="breadcrumb-item active" aria-current="page">Details</li>
         </ol>
     </nav>
@@ -12,6 +12,6 @@
         <p>Feels like: <span class="lead">{{data.feels_like}}&deg;{{data.temperature_unit}} &nbsp; {{data.wxcondition}}</span></p>
         <p class="float-right">{{data.lbl_updatetime}} {{data.updatetime}}</p>
         <hr class="my-3">
-        <button type="button" class="btn btn-outline-info" routerLink="/weather">Back</button> &nbsp;
-      </div>
+        <button type="button" class="btn btn-outline-info" routerLink="/app/weather">Back</button> &nbsp;
+    </div>
 </div>

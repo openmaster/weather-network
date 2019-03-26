@@ -47,6 +47,14 @@ export class WeatherDataService {
       );
   }
 
+  getPhotos(): Observable<any> {
+    return this.http.get('/api/photo')
+    .pipe(
+      tap(result => this.log('Success ! Fetching all the photos.')),
+      catchError(this.handleError('getPhotos Service', []))
+    );
+  }
+
 
 
 }

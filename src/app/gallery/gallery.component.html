@@ -1,9 +1,20 @@
 <div class="container">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a routerLink="/weather">Weather</a></li>
+          <li class="breadcrumb-item"><a routerLink="/app/weather">Weather</a></li>
           <li class="breadcrumb-item active" aria-current="page">Gallery</li>
         </ol>
-    </nav>
-    <div class="gbody"></div>
+  </nav>
+  <div class="gbody" *ngIf="selectedImg; else allImages">
+    <button class="btn btn-info btn-sm" (click)="closeImg()">Back to Images</button>
+    <br/>
+    <img class="rounded img-fluid zoomedImg" src="{{selectedImg.url}}">  
+  </div>
+  <ng-template #allImages class="gbody">
+    <img class="rounded smallImg" 
+      *ngFor="let photo of data" 
+      (click)="imageDetail(photo)" 
+      src="{{photo.url}}" alt="pics">
+  </ng-template>
+
 </div>
